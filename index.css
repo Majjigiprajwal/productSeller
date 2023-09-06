@@ -1,0 +1,19 @@
+body{
+  box-sizing: border-box;
+  padding:0px;
+  margin: 0px;
+
+}
+
+
+li{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    align-items:center;
+    justify-content: center;
+}
+
+.deleteBtn{
+    margin-left : 70%;
+}

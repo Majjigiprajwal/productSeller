@@ -10,28 +10,38 @@
         <title>Products</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-         <div class="main-container" style="margin: 20px; padding-top: 20px;">
+         <div class="main-container" style="margin: 20px; padding-top: 20px; align-items: center; display: flex;flex-direction: column;">
             <header>
-                <h1>Store</h1>
+                <center><h1>Expense Tracker</h1></center>
             </header>
-            <div>
-                <h2>Add Products</h2>
-                <form id="form">
-                    <label for="productName">Product Name</label>
-                    <input type="text" for="productName" id="product">
-                    <label for="price">Product Price</label>
-                    <input type="text" for="price" id="productPrice">
-                    <button type="submit">Add Product</button>
+            <div  class="card card-body" style="background-color:rgb(218, 221, 212);width:100%;align-items: center;margin-bottom: 5px;">
+                <h2 class="title">Add Expense</h2>
+                <form id="form" class="form-inline mb-3">
+                    <label for="expenseDesc" style="font-weight: 500;">Expense Description</label>
+                    <input type="text" for="expenseDesc" id="description" class="form-control mr-2">
+                    <label for="amount" style="font-weight: 500;">Expense  Amount</label>
+                    <input type="text" for="amount" id="amount" class="form-control mr-2">
+                    <label for="Category"  style="font-weight: 500;">Choose Category</label>
+                    <select id="Category" class="form-control mr-2"   style="font-weight: 500;">
+                      <option selected>Choose...</option>
+                      <option>Movie</option>
+                      <option>Food</option>
+                      <option>Books</option>
+                      <option>Clothes</option>
+                      <option>Rent</option>
+                    </select>
+                    <button type="submit">Add Expense</button>
                 </form>
             </div>
-            <div id="products">
-                <h2>Products</h2>
+            <div id="products" class="card card-body" style="width:60%;background-color: coral;align-items:center;">
+                <h2>Expenses</h2>
             </div>
-            <div id="totalPrice">
-             <p>Total price of the products :-<span id="price">0</span></p>
+            <div id="expense-list" class="card card-body" style="width:60%;background-color: rgb(95, 89, 87);color: white;font-size: 30px;">
+            
             </div>
          </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
